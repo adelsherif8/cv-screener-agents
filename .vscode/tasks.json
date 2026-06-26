@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Clean Alembic cache",
+			"type": "shell",
+			"command": "rm -rf /Users/adel/Desktop/CV2/backend/gateway/alembic/versions/__pycache__",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Delete all __pycache__ folders",
+			"type": "shell",
+			"command": "find /Users/adel/Desktop/CV2 -type d -name '__pycache__' -exec rm -rf {} +",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Delete all .pyc files",
+			"type": "shell",
+			"command": "find /Users/adel/Desktop/CV2 -type f -name '*.pyc' -delete",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

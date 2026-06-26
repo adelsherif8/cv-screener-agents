@@ -1,0 +1,334 @@
+{
+  "core_skills": {
+    "React": {
+      "keywords": ["react", "react.js", "reactjs", "react native"],
+      "synonyms": ["react framework", "react library", "react development"],
+      "category": "frontend",
+      "weight": 0.9,
+      "skill_type": "core",
+      "related": ["JavaScript", "JSX", "Virtual DOM"]
+    },
+    "JavaScript": {
+      "keywords": ["javascript", "js", "ecmascript", "es6", "es2015", "es2020"],
+      "synonyms": ["vanilla js", "modern javascript", "js development"],
+      "category": "frontend",
+      "weight": 0.9,
+      "skill_type": "core",
+      "related": ["TypeScript", "Node.js", "React"]
+    },
+    "TypeScript": {
+      "keywords": ["typescript", "ts"],
+      "synonyms": ["typed javascript", "ts development"],
+      "category": "frontend",
+      "weight": 0.8,
+      "skill_type": "core",
+      "related": ["JavaScript", "Type Safety"]
+    },
+    "Python": {
+      "keywords": ["python", "py", "python3", "python 3"],
+      "synonyms": ["python development", "python programming"],
+      "category": "backend",
+      "weight": 0.9,
+      "skill_type": "core",
+      "related": ["Django", "Flask", "FastAPI"]
+    },
+    "Django": {
+      "keywords": ["django", "django rest", "django framework", "django rest framework"],
+      "synonyms": ["django web framework"],
+      "category": "backend",
+      "weight": 0.8,
+      "skill_type": "core",
+      "related": ["Python", "REST APIs", "ORM"]
+    },
+    "Node.js": {
+      "keywords": ["node", "nodejs", "node.js", "express", "express.js"],
+      "synonyms": ["node development", "server-side javascript"],
+      "category": "backend",
+      "weight": 0.8,
+      "skill_type": "core",
+      "related": ["JavaScript", "Express", "NPM"]
+    },
+    "Java": {
+      "keywords": ["java", "openjdk", "java programming"],
+      "synonyms": ["java development", "java enterprise"],
+      "category": "backend",
+      "weight": 0.8,
+      "skill_type": "core",
+      "related": ["Spring", "Maven", "JVM"],
+      "exclusions": ["javascript", "json"]
+    },
+    "Angular": {
+      "keywords": ["angular", "angularjs", "angular 2+", "angular framework"],
+      "synonyms": ["angular development"],
+      "category": "frontend",
+      "weight": 0.8,
+      "skill_type": "core",
+      "related": ["TypeScript", "RxJS", "NgRx"]
+    },
+    "Vue.js": {
+      "keywords": ["vue", "vue.js", "vuejs", "vue js", "vue framework"],
+      "synonyms": ["vue development"],
+      "category": "frontend",
+      "weight": 0.8,
+      "skill_type": "core",
+      "related": ["JavaScript", "Vuex", "Vue Router"]
+    },
+    "CSS3": {
+      "keywords": ["css", "css3", "styling", "sass", "scss", "less", "stylus"],
+      "synonyms": ["css development", "stylesheet", "css frameworks"],
+      "category": "frontend",
+      "weight": 0.6,
+      "skill_type": "core",
+      "related": ["HTML5", "Responsive Design", "Flexbox"]
+    },
+    "HTML5": {
+      "keywords": ["html", "html5", "markup", "semantic html"],
+      "synonyms": ["html development", "markup language"],
+      "category": "frontend",
+      "weight": 0.5,
+      "skill_type": "core",
+      "related": ["CSS3", "Web Standards", "Accessibility"]
+    },
+    "State Management": {
+      "keywords": ["state management", "redux", "zustand", "vuex", "ngrx", "context api", "mobx"],
+      "synonyms": ["application state", "state handling"],
+      "category": "frontend",
+      "weight": 0.8,
+      "skill_type": "core",
+      "related": ["React", "Vue.js", "Angular"]
+    },
+    "REST APIs": {
+      "keywords": ["rest", "api", "restful", "web services", "rest api", "restful api"],
+      "synonyms": ["api development", "web api", "http api"],
+      "category": "backend",
+      "weight": 0.7,
+      "skill_type": "core",
+      "related": ["HTTP", "JSON", "API Design"]
+    },
+    "SQL": {
+      "keywords": ["sql", "mysql", "postgresql", "database", "postgres", "sqlite"],
+      "synonyms": ["database queries", "relational database"],
+      "category": "database",
+      "weight": 0.7,
+      "skill_type": "core",
+      "related": ["Database Design", "Query Optimization"]
+    }
+  },
+  
+  "soft_skills": {
+    "Communication": {
+      "keywords": ["communication", "collaborate", "teamwork", "cross-functional", "presentation", "documentation"],
+      "synonyms": ["interpersonal skills", "collaboration", "team player"],
+      "category": "interpersonal",
+      "weight": 0.8,
+      "skill_type": "soft",
+      "evidence_patterns": ["excellent communication", "strong communication", "collaborate with"]
+    },
+    "Leadership": {
+      "keywords": ["leadership", "mentor", "lead", "mentoring", "junior developers", "team lead", "manage"],
+      "synonyms": ["team leadership", "people management", "coaching"],
+      "category": "interpersonal",
+      "weight": 0.8,
+      "skill_type": "soft",
+      "evidence_patterns": ["mentor junior", "lead team", "manage developers"]
+    },
+    "Problem Solving": {
+      "keywords": ["problem solving", "analytical", "troubleshoot", "debugging", "critical thinking", "complex issues"],
+      "synonyms": ["analytical thinking", "troubleshooting", "issue resolution"],
+      "category": "cognitive",
+      "weight": 0.7,
+      "skill_type": "soft",
+      "evidence_patterns": ["solve complex", "troubleshoot issues", "analytical approach"]
+    },
+    "Adaptability": {
+      "keywords": ["adaptability", "flexible", "learning", "innovation", "change management", "fast-paced"],
+      "synonyms": ["flexibility", "quick learner", "adaptable"],
+      "category": "behavioral",
+      "weight": 0.6,
+      "skill_type": "soft",
+      "evidence_patterns": ["fast-paced environment", "adapt to", "continuous learning"]
+    },
+    "Time Management": {
+      "keywords": ["time management", "deadline", "prioritize", "organize", "efficiency", "multitask"],
+      "synonyms": ["organizational skills", "priority management"],
+      "category": "behavioral",
+      "weight": 0.6,
+      "skill_type": "soft",
+      "evidence_patterns": ["meet deadlines", "prioritize tasks", "manage multiple"]
+    }
+  },
+  
+  "bonus_skills": {
+    "Build Tools": {
+      "keywords": ["build tools", "webpack", "vite", "rollup", "parcel", "bundling", "esbuild"],
+      "synonyms": ["bundling tools", "build system"],
+      "category": "tools",
+      "weight": 0.7,
+      "skill_type": "bonus",
+      "related": ["JavaScript", "Frontend Development"]
+    },
+    "Responsive Design": {
+      "keywords": ["responsive design", "mobile-first", "responsive", "media queries", "mobile responsive"],
+      "synonyms": ["mobile design", "cross-device compatibility"],
+      "category": "frontend",
+      "weight": 0.8,
+      "skill_type": "bonus",
+      "related": ["CSS3", "UX Design"]
+    },
+    "UX Principles": {
+      "keywords": ["ux principles", "user experience", "usability", "accessibility", "user-centered", "ux design"],
+      "synonyms": ["user experience design", "usability testing"],
+      "category": "design",
+      "weight": 0.7,
+      "skill_type": "bonus",
+      "related": ["UI Design", "User Research"]
+    },
+    "Web Performance": {
+      "keywords": ["performance optimization", "web performance", "optimization", "loading speed", "performance tuning"],
+      "synonyms": ["speed optimization", "performance improvement"],
+      "category": "frontend",
+      "weight": 0.8,
+      "skill_type": "bonus",
+      "related": ["JavaScript", "Build Tools"]
+    },
+    "Git": {
+      "keywords": ["git", "version control", "github", "gitlab", "bitbucket"],
+      "synonyms": ["source control", "code versioning"],
+      "category": "tools",
+      "weight": 0.6,
+      "skill_type": "bonus",
+      "related": ["Development Workflow", "Collaboration"]
+    },
+    "Docker": {
+      "keywords": ["docker", "containerization", "containers", "dockerfile"],
+      "synonyms": ["container technology", "containerized applications"],
+      "category": "devops",
+      "weight": 0.6,
+      "skill_type": "bonus",
+      "related": ["DevOps", "Deployment"]
+    },
+    "AWS": {
+      "keywords": ["aws", "amazon web services", "cloud", "ec2", "s3", "lambda"],
+      "synonyms": ["amazon cloud", "aws services"],
+      "category": "cloud",
+      "weight": 0.7,
+      "skill_type": "bonus",
+      "related": ["Cloud Computing", "Infrastructure"]
+    },
+    "Azure": {
+      "keywords": ["azure", "microsoft azure", "azure cloud"],
+      "synonyms": ["microsoft cloud"],
+      "category": "cloud",
+      "weight": 0.7,
+      "skill_type": "bonus",
+      "related": ["Cloud Computing", "Microsoft Stack"]
+    },
+    "GCP": {
+      "keywords": ["gcp", "google cloud", "google cloud platform"],
+      "synonyms": ["google cloud services"],
+      "category": "cloud",
+      "weight": 0.7,
+      "skill_type": "bonus",
+      "related": ["Cloud Computing", "Google Services"]
+    },
+    "Agile": {
+      "keywords": ["agile", "scrum", "kanban", "sprint", "agile methodology"],
+      "synonyms": ["agile development", "scrum master"],
+      "category": "methodology",
+      "weight": 0.6,
+      "skill_type": "bonus",
+      "related": ["Project Management", "Team Collaboration"]
+    },
+    "GraphQL": {
+      "keywords": ["graphql", "graph ql", "apollo"],
+      "synonyms": ["graph query language"],
+      "category": "backend",
+      "weight": 0.6,
+      "skill_type": "bonus",
+      "related": ["APIs", "Data Fetching"]
+    },
+    "Testing": {
+      "keywords": ["testing", "jest", "cypress", "unit tests", "integration tests", "test automation"],
+      "synonyms": ["automated testing", "test frameworks"],
+      "category": "quality",
+      "weight": 0.6,
+      "skill_type": "bonus",
+      "related": ["Quality Assurance", "Test Driven Development"]
+    },
+    "Next.js": {
+      "keywords": ["next.js", "nextjs", "next js", "next framework"],
+      "synonyms": ["next react framework"],
+      "category": "frontend",
+      "weight": 0.7,
+      "skill_type": "bonus",
+      "related": ["React", "Server-Side Rendering"]
+    },
+    "Svelte": {
+      "keywords": ["svelte", "sveltekit"],
+      "synonyms": ["svelte framework"],
+      "category": "frontend",
+      "weight": 0.6,
+      "skill_type": "bonus",
+      "related": ["JavaScript", "Component Framework"]
+    }
+  },
+
+  "language_requirements": {
+    "English": {
+      "keywords": ["english", "fluent in english", "english proficiency", "native english"],
+      "levels": ["basic", "conversational", "fluent", "native"]
+    },
+    "Arabic": {
+      "keywords": ["arabic", "fluent in arabic", "arabic proficiency", "native arabic"],
+      "levels": ["basic", "conversational", "fluent", "native"]
+    },
+    "French": {
+      "keywords": ["french", "fluent in french", "french proficiency"],
+      "levels": ["basic", "conversational", "fluent", "native"]
+    },
+    "German": {
+      "keywords": ["german", "fluent in german", "german proficiency"],
+      "levels": ["basic", "conversational", "fluent", "native"]
+    },
+    "Spanish": {
+      "keywords": ["spanish", "fluent in spanish", "spanish proficiency"],
+      "levels": ["basic", "conversational", "fluent", "native"]
+    }
+  },
+
+  "seniority_patterns": {
+    "principal": {
+      "keywords": ["principal", "staff", "architect", "distinguished", "chief"],
+      "min_years": 8,
+      "level": "Principal"
+    },
+    "lead": {
+      "keywords": ["lead", "team lead", "tech lead", "engineering lead", "senior lead"],
+      "min_years": 5,
+      "level": "Lead"
+    },
+    "senior": {
+      "keywords": ["senior", "sr.", "sr ", "experienced"],
+      "min_years": 4,
+      "level": "Senior"
+    },
+    "mid": {
+      "keywords": ["mid", "intermediate", "mid-level", "mid level"],
+      "min_years": 2,
+      "level": "Mid"
+    },
+    "junior": {
+      "keywords": ["junior", "jr.", "entry", "graduate", "associate", "entry-level"],
+      "min_years": 0,
+      "level": "Junior"
+    }
+  },
+
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2025-08-22",
+    "total_skills": 50,
+    "categories": ["frontend", "backend", "database", "devops", "cloud", "tools", "design", "quality", "methodology"],
+    "update_strategy": "Manual curation with periodic review of new job postings"
+  }
+}

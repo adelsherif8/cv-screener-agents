@@ -1,0 +1,268 @@
+openapi: 3.0.3
+info:
+  title: CV2 Gateway API
+  version: 1.0.0
+  description: Gateway BFF for CV2 platform
+servers:
+  - url: http://localhost:8000
+paths:
+  /jobs:
+    post:
+      summary: Create job and trigger JD Agent
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobProfile'
+      responses:
+        '200':
+          description: JobProfile created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobProfile'
+  /jobs/{id}:
+    get:
+      summary: Get job and requirements
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: JobProfile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobProfile'
+  /jobs/{id}/requirements:
+    put:
+      summary: Update job requirements
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/JobRequirement'
+      responses:
+        '200':
+          description: Requirements updated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+  /jobs/{id}/candidates/import:
+    post:
+      summary: Upload CVs and enqueue CV Agent
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                files:
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        '200':
+          description: Candidates imported
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+  /jobs/{id}/candidates:
+    get:
+      summary: List candidates for job
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: List of candidates
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CandidateCV'
+  /jobs/{jid}/candidates/{cid}/analyze:
+    post:
+      summary: Run Fit Agent and return FitReport
+      parameters:
+        - name: jid
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: cid
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: FitReport
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FitReport'
+  /fit/{id}:
+    get:
+      summary: Fetch FitReport JSON/HTML/PDF
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: FitReport
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FitReport'
+components:
+  schemas:
+    JobProfile:
+      type: object
+      required:
+        - title
+        - description
+        - requirements
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        seniority:
+          type: string
+        domain_tags:
+          type: array
+          items:
+            type: string
+        requirements:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobRequirement'
+        screening_questions:
+          type: array
+          items:
+            type: string
+        ats_keywords:
+          type: array
+          items:
+            type: string
+    JobRequirement:
+      type: object
+      required:
+        - skill_id
+        - name
+        - weight
+        - critical
+      properties:
+        skill_id:
+          type: string
+        name:
+          type: string
+        weight:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 1
+        critical:
+          type: boolean
+        rationale:
+          type: string
+        aliases:
+          type: object
+    CandidateCV:
+      type: object
+      required:
+        - name
+        - role_blocks
+        - ats_coverage
+        - evidence
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        role_blocks:
+          type: array
+          items:
+            type: object
+        ats_coverage:
+          type: number
+          format: float
+        evidence:
+          type: array
+          items:
+            type: object
+    FitReport:
+      type: object
+      required:
+        - job_id
+        - candidate_id
+        - per_skill_ratings
+        - total_score
+        - label
+      properties:
+        job_id:
+          type: integer
+        candidate_id:
+          type: integer
+        per_skill_ratings:
+          type: array
+          items:
+            type: object
+        total_score:
+          type: number
+          format: float
+        label:
+          type: string
+        pros:
+          type: array
+          items:
+            type: string
+        cons:
+          type: array
+          items:
+            type: string
+        red_flags:
+          type: array
+          items:
+            type: string
+        recommendations_hr:
+          type: string
+        recommendations_candidate:
+          type: string

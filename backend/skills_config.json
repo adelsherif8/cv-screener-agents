@@ -1,0 +1,236 @@
+{
+  "skills_taxonomy": {
+    "React": {
+      "keywords": ["react", "react.js", "reactjs", "react native"],
+      "category": "frontend",
+      "weight": 0.9,
+      "aliases": ["React.js", "ReactJS"]
+    },
+    "TypeScript": {
+      "keywords": ["typescript", "ts"],
+      "category": "frontend", 
+      "weight": 0.8,
+      "aliases": ["TS"]
+    },
+    "JavaScript": {
+      "keywords": ["javascript", "js", "ecmascript", "es6", "es2015"],
+      "category": "frontend",
+      "weight": 0.9,
+      "aliases": ["JS", "ECMAScript"]
+    },
+    "Angular": {
+      "keywords": ["angular", "angularjs", "angular2", "angular 2"],
+      "category": "frontend",
+      "weight": 0.8,
+      "aliases": ["Angular.js", "AngularJS"]
+    },
+    "Vue.js": {
+      "keywords": ["vue", "vue.js", "vuejs", "vue js"],
+      "category": "frontend",
+      "weight": 0.7,
+      "aliases": ["Vue", "VueJS"]
+    },
+    "CSS3": {
+      "keywords": ["css", "css3", "styling", "sass", "scss", "less", "stylus"],
+      "category": "frontend",
+      "weight": 0.6,
+      "aliases": ["CSS", "Sass", "SCSS", "Less"]
+    },
+    "HTML5": {
+      "keywords": ["html", "html5", "markup", "semantic html"],
+      "category": "frontend",
+      "weight": 0.5,
+      "aliases": ["HTML"]
+    },
+    "Node.js": {
+      "keywords": ["node", "nodejs", "node.js", "node js"],
+      "category": "backend",
+      "weight": 0.8,
+      "aliases": ["Node", "NodeJS"]
+    },
+    "Python": {
+      "keywords": ["python", "py", "python3"],
+      "category": "backend",
+      "weight": 0.9,
+      "aliases": ["Python3", "Py"]
+    },
+    "Java": {
+      "keywords": ["java", "openjdk"],
+      "category": "backend",
+      "weight": 0.8,
+      "aliases": ["OpenJDK"]
+    },
+    "C#": {
+      "keywords": ["c#", "csharp", "c sharp", ".net", "dotnet"],
+      "category": "backend",
+      "weight": 0.8,
+      "aliases": ["CSharp", ".NET", "DotNet"]
+    },
+    "PHP": {
+      "keywords": ["php", "php7", "php8"],
+      "category": "backend",
+      "weight": 0.7,
+      "aliases": ["PHP7", "PHP8"]
+    },
+    "Ruby": {
+      "keywords": ["ruby", "ruby on rails", "rails"],
+      "category": "backend",
+      "weight": 0.7,
+      "aliases": ["Ruby on Rails", "Rails"]
+    },
+    "Go": {
+      "keywords": ["go", "golang", "go lang"],
+      "category": "backend",
+      "weight": 0.8,
+      "aliases": ["Golang"]
+    },
+    "Rust": {
+      "keywords": ["rust", "rust lang"],
+      "category": "backend",
+      "weight": 0.7,
+      "aliases": ["Rust Lang"]
+    },
+    "Git": {
+      "keywords": ["git", "version control", "github", "gitlab", "bitbucket"],
+      "category": "tools",
+      "weight": 0.5,
+      "aliases": ["GitHub", "GitLab", "Bitbucket"]
+    },
+    "Docker": {
+      "keywords": ["docker", "containerization", "containers"],
+      "category": "devops",
+      "weight": 0.6,
+      "aliases": ["Containerization"]
+    },
+    "Kubernetes": {
+      "keywords": ["kubernetes", "k8s", "container orchestration"],
+      "category": "devops",
+      "weight": 0.7,
+      "aliases": ["K8s"]
+    },
+    "AWS": {
+      "keywords": ["aws", "amazon web services", "cloud", "ec2", "s3", "lambda"],
+      "category": "cloud",
+      "weight": 0.7,
+      "aliases": ["Amazon Web Services", "EC2", "S3", "Lambda"]
+    },
+    "Azure": {
+      "keywords": ["azure", "microsoft azure"],
+      "category": "cloud",
+      "weight": 0.7,
+      "aliases": ["Microsoft Azure"]
+    },
+    "GCP": {
+      "keywords": ["gcp", "google cloud", "google cloud platform"],
+      "category": "cloud",
+      "weight": 0.7,
+      "aliases": ["Google Cloud", "Google Cloud Platform"]
+    },
+    "MongoDB": {
+      "keywords": ["mongodb", "mongo", "nosql"],
+      "category": "database",
+      "weight": 0.6,
+      "aliases": ["Mongo", "NoSQL"]
+    },
+    "PostgreSQL": {
+      "keywords": ["postgresql", "postgres", "psql"],
+      "category": "database",
+      "weight": 0.7,
+      "aliases": ["Postgres", "PSQL"]
+    },
+    "MySQL": {
+      "keywords": ["mysql", "sql"],
+      "category": "database",
+      "weight": 0.6,
+      "aliases": ["SQL"]
+    },
+    "Redis": {
+      "keywords": ["redis", "caching"],
+      "category": "database",
+      "weight": 0.5,
+      "aliases": ["Cache"]
+    },
+    "REST APIs": {
+      "keywords": ["rest", "api", "restful", "endpoints", "web services"],
+      "category": "backend",
+      "weight": 0.8,
+      "aliases": ["RESTful APIs", "Web Services", "API"]
+    },
+    "GraphQL": {
+      "keywords": ["graphql", "graph ql"],
+      "category": "backend",
+      "weight": 0.6,
+      "aliases": ["Graph QL"]
+    },
+    "Testing": {
+      "keywords": ["testing", "jest", "cypress", "unit tests", "integration tests", "tdd", "bdd"],
+      "category": "quality",
+      "weight": 0.6,
+      "aliases": ["Jest", "Cypress", "TDD", "BDD", "Unit Testing"]
+    },
+    "CI/CD": {
+      "keywords": ["ci/cd", "continuous integration", "continuous deployment", "jenkins", "github actions"],
+      "category": "devops",
+      "weight": 0.6,
+      "aliases": ["Jenkins", "GitHub Actions", "Continuous Integration"]
+    },
+    "Leadership": {
+      "keywords": ["lead", "mentor", "leadership", "manage", "team lead", "tech lead"],
+      "category": "soft",
+      "weight": 0.8,
+      "aliases": ["Team Lead", "Tech Lead", "Management", "Mentoring"]
+    },
+    "Agile": {
+      "keywords": ["agile", "scrum", "kanban", "sprint"],
+      "category": "methodology",
+      "weight": 0.5,
+      "aliases": ["Scrum", "Kanban", "Sprint Planning"]
+    },
+    "Communication": {
+      "keywords": ["communication", "collaborate", "teamwork", "presentation"],
+      "category": "soft",
+      "weight": 0.7,
+      "aliases": ["Collaboration", "Teamwork", "Presentations"]
+    },
+    "Problem Solving": {
+      "keywords": ["problem solving", "analytical", "troubleshoot", "debugging"],
+      "category": "soft",
+      "weight": 0.7,
+      "aliases": ["Analytical Thinking", "Troubleshooting", "Debugging"]
+    }
+  },
+  "seniority_patterns": {
+    "principal": {
+      "keywords": ["principal", "staff", "architect", "distinguished"],
+      "min_years": 8,
+      "level": "Principal"
+    },
+    "lead": {
+      "keywords": ["lead", "team lead", "tech lead", "engineering lead"],
+      "min_years": 5,
+      "level": "Lead"
+    },
+    "senior": {
+      "keywords": ["senior", "sr.", "sr ", "experienced"],
+      "min_years": 4,
+      "level": "Senior"
+    },
+    "mid": {
+      "keywords": ["mid", "intermediate", "mid-level"],
+      "min_years": 2,
+      "level": "Mid"
+    },
+    "junior": {
+      "keywords": ["junior", "jr.", "entry", "graduate", "associate"],
+      "min_years": 0,
+      "level": "Junior"
+    }
+  },
+  "experience_weights": {
+    "0-1": "Junior",
+    "2-3": "Mid", 
+    "4-6": "Senior",
+    "7-9": "Lead",
+    "10+": "Principal"
+  }
+}
