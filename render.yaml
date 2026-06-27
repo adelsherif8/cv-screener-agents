@@ -1,0 +1,21 @@
+# Render Blueprint for the CV Screener gateway (FastAPI).
+# NOTE: this is a multi-agent system. The gateway is the entry point; the
+# cv_agent / jd_agent / fit_agent services may need to be deployed separately
+# (each is its own FastAPI app under backend/<agent>) and wired via env vars.
+# This blueprint deploys the gateway; see DEPLOY.md for the full picture.
+services:
+  - type: web
+    name: cv-screener-gateway
+    runtime: python
+    rootDir: backend/gateway
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
