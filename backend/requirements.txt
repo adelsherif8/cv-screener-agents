@@ -1,0 +1,27 @@
+# Unified dependencies for the single-service deploy (backend/app_combined.py).
+# This is the union of what the gateway and the (in-process) CV/JD/Fit logic
+# import. Pinned to versions compatible with Python 3.11.x.
+
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+pydantic==2.7.4
+python-multipart==0.0.9
+
+# Auth
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.3
+
+# Database (SQLite via SQLAlchemy)
+SQLAlchemy==2.0.30
+
+# OpenAI + env
+openai==1.35.7
+# openai 1.35.x is incompatible with httpx>=0.28 (it passes the removed
+# `proxies` kwarg). Pin httpx to a compatible release.
+httpx==0.27.2
+python-dotenv==1.0.1
+
+# Document parsing (CV ingestion)
+PyPDF2==3.0.1
+python-docx==1.1.2

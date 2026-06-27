@@ -28,3 +28,5 @@ logs/
 .DS_Store
 Thumbs.db
 *.pptx
+# Personal/uploaded documents — do not commit resumes or sample CVs
+*.pdf

@@ -1,21 +1,26 @@
-# Render Blueprint for the CV Screener gateway (FastAPI).
-# NOTE: this is a multi-agent system. The gateway is the entry point; the
-# cv_agent / jd_agent / fit_agent services may need to be deployed separately
-# (each is its own FastAPI app under backend/<agent>) and wired via env vars.
-# This blueprint deploys the gateway; see DEPLOY.md for the full picture.
+# Render Blueprint — single-service deploy of the CV Screener.
+#
+# This system is presented as multi-agent (gateway + cv/jd/fit agents), but in
+# the current code all CV/JD/Fit logic runs IN-PROCESS inside the gateway app
+# (the per-agent dirs are empty placeholders). So one FastAPI service is the
+# whole backend. The unified entry point is backend/app_combined.py, which wires
+# up import paths and re-exports the gateway app. See DEPLOY.md.
 services:
   - type: web
-    name: cv-screener-gateway
+    name: cv-screener
     runtime: python
-    rootDir: backend/gateway
+    rootDir: backend
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    startCommand: uvicorn app_combined:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /healthz
     autoDeploy: true
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
+      # Required: your OpenAI API key (set in the Render dashboard).
       - key: OPENAI_API_KEY
         sync: false
+      # Comma-separated list of allowed CORS origins (e.g. your Vercel URL).
       - key: ALLOWED_ORIGINS
         sync: false
